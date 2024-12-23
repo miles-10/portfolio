@@ -80,6 +80,16 @@
     right: 0;
 }
 
+.i-button {
+    border: none;
+    padding: 15px;
+    width: 15%;
+    background-color: #59b256;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 @media screen and (max-width:480px) {
     .i{
