@@ -20,22 +20,42 @@ const contact = () => {
   const theme = UseContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
 
+//     emailjs
+//       .sendForm(
+//         "service_mt87wb8",
+//         "template_yu54efp",
+//         formRef.current,
+//         "ljYaEEiwtY4Aybwaw"
+//       )
+//       .then(
+//         (result) => {
+//           console.log(result.text);
+//         },
+//         (error) => {
+//           console.log(error.text);
+//         }
+//       );
+//   };
+const handleSubmit = (e) => {
+    e.preventDefault();
     emailjs
       .sendForm(
-        "service_mt87wb8",
+        "service_mt87wb8", 
         "template_yu54efp",
-        formRef.current,
-        "ljYaEEiwtY4Aybwaw"
+        formRef.current, 
+        "ljYaEEiwtY4Aybwaw" 
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log("Email sent successfully:", result.text);
+          setDone(true);
+          formRef.current.reset(); 
         },
         (error) => {
-          console.log(error.text);
+          console.error("Error sending email:", error.text);
         }
       );
   };
