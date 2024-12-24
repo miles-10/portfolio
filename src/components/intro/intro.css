@@ -81,14 +81,24 @@
 }
 
 .i-button {
-    border: none;
+    /* border: none;
     padding: 15px;
     width: 15%;
     background-color: #59b256;
     color: white;
     font-weight: 700;
     cursor: pointer;
+    text-decoration: none; */
+    border: none;
+    padding: 15px;
+    width: 15%; /* Default width for larger screens */
+    background-color: #59b256;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
     text-decoration: none;
+    display: inline-block;
+    text-align: center; /* Ensures proper text alignment */
 }
 
 @media screen and (max-width:480px) {
@@ -102,5 +112,10 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+    }
+    .i-button {
+        width: 80%;
+        padding: 12px; 
+        font-size: 14px; 
     }
 }
